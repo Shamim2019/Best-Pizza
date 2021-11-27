@@ -1,5 +1,18 @@
 h1{
-    color:blue;
+    color:yellow;
     /* background-image: url(./pizza_bg-removebg-preview\ \(1\).png); */
     text-align: center;
+}
+p{
+    font-size: medium;
+    text-align: center;
+    text-overflow: ellipsis;
+
+}
+.pt-4{
+ background-color:rgb(167, 23, 159);
+}
+.custom-selectcustom-select-lgmb-3{
+
+    justify-content: last baseline;
 }
