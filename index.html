@@ -9,7 +9,10 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="./CSS/styles.css" />
+     <link rel="stylesheet" type="text/css" href="./CSS/styles.css" /> 
+    <link rel="stylesheet" href="./js/jquerry-1.12.0.js">
+    <link rel="stylesheet" href="./script.js">
+    <link rel="stylesheet" href="./css/bootstrap.css">
 
     <title>Best Pizza</title>
 </head>
@@ -31,7 +34,7 @@
                     <a class="nav-link" href="order.html">order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="products.html">Products</a>
+                    <a class="nav-link" href="product.html">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">contacts</a>
@@ -63,7 +66,7 @@
                       <table class="show-cart table">
   
                       </table>
-                      <div>Total price: $0 <span class="total-cart"></span></div>
+                      <div>Total price: shs.0 <span class="total-cart"></span></div>
                      </div>
                       <div class="modal-footer">
                       <button class="btn btn-primary"><a href="checkout" class="text-light">CheckOut</a></button>
@@ -135,7 +138,7 @@
         </section>
       <!--Gallery + carousel-->
            <section>
-          <h5 class="text-center pt-4 font-weight-bold text-xl">Our Products</h5>
+          <h5 class="text-center pt-4 font-weight-bold text-xl">Products</h5>
           <div class="container carousel slide carousel-multi-item text-center pb-4" data-ride="carousel" id="our-products">
               <ol class="carousel-indicators">
                   <li data-target="our-products" data-slide-to="0" class="active"></li>
@@ -154,7 +157,7 @@
                       <img src="./Neapolitan_pizza-removebg-preview.png" alt="Los Angeles" width="600">
                       <div class="carousel-caption">
                           <h3>Neopolitan pizza</h3>
-                          <p>$500</p>
+                          
                       </div>
                   </div>
   
@@ -162,7 +165,7 @@
                       <img src="./St.louis_pizza-removebg-preview.png" alt="Chicago" width="600">
                       <div class="carousel-caption">
                           <h3>St.louis pizza</h3>
-                          <p>$4000</p>
+                          
                       </div>
                   </div>
   
@@ -177,7 +180,7 @@
                       <img src="./chicago_pizza-removebg-preview.png" alt="New York" width="600">
                       <div class="carousel-caption">
                           <h3>chicago pizza</h3>
-                          <p> $1300 </p>
+                          
                       </div>
                   </div>
                    <div class="carousel-item" data-bs-interval="1000">
@@ -191,21 +194,21 @@
                     <img src="./pizza_bg-removebg-preview (1).png" alt="New York" width="600">
                     <div class="carousel-caption">
                         <h3>sicilian pizza</h3>
-                        <p> $1300 </p>
+                    
                     </div>
                  </div> 
                 <div class="carousel-item" data-bs-interval="1000">
                     <img src="./Detroit_pizza-removebg-preview.png" alt="New York" width="600">
                     <div class="carousel-caption">
                         <h3>Greek pizza</h3>
-                        <p>$1500</p>
+        
                     </div>
                 </div>  
                 <div class="carousel-item" data-bs-interval="1000">
                     <img src="./pizza_bg-removebg-preview (1).png" alt="New York" width="600">
                     <div class="carousel-caption">
                         <h3>pizza bg</h3>
-                        <p> $1300 </p>
+                    
                     </div>
                 </div>
               </div>
@@ -220,8 +223,8 @@
                         <img src="./carlifornia_pizza-removebg-preview.png">
                         <div class="card-body text-dark text-center">
                               <h5 class="card-title">carlifornia_pizza</h5>
-                              <h5 class="font-italic"> $500</h5>
-                              <a href="" data-name="Touch-pad" data-price="500" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+                              <!-- <h5 class="font-italic"> $500</h5> -->
+                              <a href="" data-name="" data-price="500" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                           </div>
                     
                           </div>
@@ -232,8 +235,8 @@
                           <img src="./thin_crust_pizza-removebg-preview.png">
                           <div class="card-body text-dark text-center">
                               <h5 class="card-title">Thick crust pizza</h5>
-                              <h5 class="font-italic"> $540</h5>
-                              <a href="" data-name="Touch-pad-2" data-price="540" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+                              <!-- <h5 class="font-italic"> $540</h5> -->
+                              <a href="" data-name="" data-price="540" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                           </div>
                       </div>
                   </div>
@@ -243,33 +246,29 @@
                           <img src="./thin_crust_pizza-removebg-preview.png">
                           <div class="card-body text-dark text-center">
                               <h5 class="card-title">Thin pizza crust</h5>
-                              <h5 class="font-italic"> $700</h5>
-                              <a href="" data-name="Hp-icore-7" data-price="700" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+                              <!-- <h5 class="font-italic"> $700</h5> -->
+                              <a href="" data-name="" data-price="700" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                           </div>
                       </div>
                   </div>
                </div>
               </div>
          </section> 
-            
-    <a href="order.html" class="btn banner-link text-uppercase my-2 text-center font-weight-bold">Order</a> 
-    <select class="custom-select custom-select-lg mb-3">
-        <option selected>select your flavoured Pizza</option>
-        <option value="1">chicago Pizza</option>
-        <option value="2">carlifornia pizza</option>
-        <option value="3">Detroit Pizza</option>
-        <option value="4">St.louis pizza</option>
-        <option value="5">Greek pizza</option>
-    </select>
+            <div id="orderhere">
+                <a href="order.html" class="btn banner-link text-uppercase my-2 text-center font-weight-bold">Order here</a> 
+            </div>
+
+             
              <!-- <footer> -->
-                <footer class="bg-dark mt-4">
-                    <p class="text-light text-center pt-4">copyright(c) of Maloba's best pizza inn center.</p>
+           <footer class="bg-dark mt-4">
                     <div class="text-center p-4"> 
+                    <p class="text-light text-center pt-4">copyright(c) of Maloba's best pizza inn center .</p>
+
                     <p class="text-light font-italic font-weight-bold">Reach us through</p>
-                    <a href="facebook.com" target="_blank"> <i class="fab fa-facebook-square text white"></i></a>
-                    <a href="gmail.com" target="_blank"> <i class="fab fa-gmail envelope-square text-white"></i>
+                    <a href="facebook.com" target="_blank"><i class="fab fa-facebook-square text white"></i></a>
+                    <a href="gmail.com" target="_blank"><i class="fab fa-gmail envelope-square text-white"></i>
                     </a>
-                    <a href="linkedIn.com" target="_blank"> <i class="fab fa-linkedin text-white"></i></a>
+                    <a href="linkedIn.com" target="_blank"><i class="fab fa-linkedin text-white"></i></a>
                     </div>
                 </footer>
       
