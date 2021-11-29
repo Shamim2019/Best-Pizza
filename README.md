@@ -6,7 +6,7 @@ GitHub Pages is designed to host your personal, organization, or project pages f
 
 ## View Live Site
   https://shamim2019.github.io/Best-Pizza/
-Author- 
+## Author- 
 shamim maloba _Student at Moringa School.
 
 ## Contact
