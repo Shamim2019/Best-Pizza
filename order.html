@@ -4,19 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> 
+      <link rel="stylesheet" href="./css/bootstrap.css"> 
+   <script src="./js/jquerry-1.12.0.js"></script> 
+   <!-- <script src="./script.js"></script>  -->
+
+    <link rel="stylesheet" href="./index.css">
     <title>order</title>
 </head>
 <body>
     <a href="order.html" class="btn banner-link text-uppercase my-2 text-center font-weight-bold"></a>
-    
-          <select class="custom-select custom-select-lg mb-3">
-            <option selected>select your flavoured Pizza</option>
-            <option value="1">chicago Pizza</option>
-            <option value="2">carlifornia pizza</option>
-            <option value="3">Detroit Pizza</option>
-            <option value="4">St.louis pizza</option>
-            <option value="5">Greek pizza</option>
-        </select>
-      
+    <h1>select flavoured pizza</h1>
+    <div class="container-fluid order" id="make-order">
+        <div class="order-overlay">
+          <div class="controls-top text-center" id="Order-now"> 
+            <h2>Order Here</h2>
+          </div>
+          <h2>Order your pizza here and we will deliver it to you.</h2>
+          <div class="row">
+              <div class="col-sm-5">
+                <form action="">
+                    <label for="select">Select Your Flavor</label><br>
+                    <select class="browser-default custom-select custom-select-md mb-3 name">
+                      <option selected value="choose">Choose your flavor</option> 
+                      <option value="">carlifornia pizza</option>
+                      <option value="">Detroit Pizza</option>
+                      <option value="">chicagoPizza</option>
+                      <option value=""> Pizza bg</option>
+                      <option value="">St.louis Pizza</option>
+                      <option value="">Greek Pizza</option>
+                    </select><br>
+                  <label for="select">Select the Size</label><br>
+                  <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                    <option selected value="0">Select your preferred size </option>
+                    <option value="large">Large -- sh. 1500</option>
+                    <option value="medium">Medium -- sh. 750</option>
+                    <option value="small">Small -- sh. 400</option>
+                  </select><br>
+                  <label for="crust">Choose your favorite Crust!</label><br>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                        <option selected value="0">Select your preferred crust!</option>
+                      <option value="Crispy">Crispy -- sh. 300</option>
+                      <option value="Stuffed">Stuffed -- sh. 120</option>
+                      <option value="Gluten-free">Gluten-free-- sh.150</option>
+                    </select>
+                  <label for="Toppings">Select Your Toppings at sh. 30 each</label><br>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="Onions" value="onions" name="toppings">
+                      <label class="custom-control-label" for="Onions">Onions</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="Green pepper" value="Green pepper" name="toppings">
+                      <label class="custom-control-label" for="Green pepper">Green pepper</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                      <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                    </div>
+                    <br><br>
+                  <button type="submit" class="btn btn-orange proceed">Proceed</button>
+                  
+                </form>
+              </div>
+            
+          <div class="col-sm-7">
+            <div id="informationp1">
+              <p>Your order will be processed and delivered within a short period of placing.</p>
+              <p>Make sure you have the total amount for the order during order delivery.</p>
+              <p>Incase of any concern, Please reach out to us as fast as possible.</p>
+            
+            </div>
+            <div class="choise">
+              <h2>Your Order is as follow:</h2>
+              <div id="your-orders">
+                <table class="table table-sm  pizzatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Crust</th>
+                      <th scope="col">Topping</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersmade">
+                    <tr>
+                      <td id="pizzaname"></td>
+                      <td id="pizzasize"></td>
+                      <td id="pizzacrust"></td>
+                      <td id="pizzatopping"></td>
+                      <td id="totals"></td>
+                    </tr>                  
+                  </tbody>
+                </table>
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p> 
+                <p id="addedprice">Delivery will cost sh. 150</p>
+                <p id="finallmessage"></p>
+              </div>
+              <button class="btn btn-orange addPizza">Add your Pizza</button>
+              <button class="btn btn-orange" id="checkout">Checkout</button>
+              <button class="btn btn-orange deliver">Home delivery?</button>
+            </div>
+            <div class="delivery">
+                <form action="">
+                  <div class="form-group">
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                    <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
+                    <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                    <button class="btn btn-orange" id="final-order">Place Order below</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+        <div class="col-md-1">
+      </div>
+      <div class="row">
+        <div class="container text-center footer">
+         <p> copyright(c) of Maloba's best pizza inn center.</p>
+        </div>
+      </div>
+  </div>
+                  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>   
 </body>
 </html>
