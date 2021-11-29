@@ -19,9 +19,7 @@ BOOTSTRAP,
 JQUERY
 Git
 Markdown
-BDD
-Copyright(c) 2021. Licenced under the MIT License.
-
+## BDD
 The project runs in the visual studio code. Download the jquery plugin from the jquery cdn then run it inside a script tag. Why was this framework chosen? With jquery, alot of javaScript functionality can be achieved with very few lines of code and in addition, it is very precise and easy to use and apply.
 
 ## Project Objectives
